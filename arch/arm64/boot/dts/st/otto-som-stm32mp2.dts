@@ -197,6 +197,8 @@
 };
 
 &a35ss_syscfg {
+  compatible = "st,stm32mp25-a35ss-syscfg", "syscon";
+  reg = <0x48802000 0xac>;
 	status = "okay";
 };
 
@@ -655,7 +657,7 @@
 			<&ipc_shmem_1>, <&vdev0vring0>,
 			<&vdev0vring1>, <&vdev0buffer>,
 			<&cm33_sram2>;
-	st,syscfg-nsvtor = <&a35ss_syscfg 0x20a8 0xffffff80>;
+	st,syscfg-nsvtor = <&a35ss_syscfg 0xa8 0xffffff80>;
 	status = "okay";
 };
 
